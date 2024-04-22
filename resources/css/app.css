@@ -40,7 +40,26 @@ img {
 
 
 /* #region Header */
+header {
+    text-align: center;
+    background-color: var(--mol-lighter);
+    
+    nav {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
 
+        & a {
+            padding: 0.5rem;
+            text-decoration: none;
+            font-weight: 400;
+
+            &.active {
+                background-color: var(--mod-primary);
+            }
+        }
+    }
+}
 
 /* #endregion Header */
 
