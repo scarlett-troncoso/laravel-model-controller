@@ -17,6 +17,37 @@
                         </div>
                     </div>
                 @endforeach
+
+                {{-- $movies->links() --}} <!--fa funzionare "paginate" (che é stato messo in PageController) serve a creare in pagina una paginazione cioé cambiare alla prossima pagina, va insieme a links, ma per usarlo bene ce bisogno di installare un'altra cosa ma in tanto cosi per sapere
+                                        -->
+            </div>
+
+            <h1>I tre Film con la votazione piu alta:</h1>
+            <div class="row">
+                @foreach ($moviesVote as $movie)
+                    <div class="col-4">
+                        <div class="card">
+                            <h3>{{ $movie['title'] }}</h3>
+                            <div>{{ $movie['nationality'] }}</div>
+                            <div>Date: {{ $movie['date'] }}</div>
+                            <div>Vote: {{ $movie['vote'] }}</div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+
+            <h1>I tre Film piu recenti:</h1>
+            <div class="row">
+                @foreach ($moviesDate as $movie)
+                    <div class="col-4">
+                        <div class="card">
+                            <h3>{{ $movie['title'] }}</h3>
+                            <div>{{ $movie['nationality'] }}</div>
+                            <div>Date: {{ $movie['date'] }}</div>
+                            <div>Vote: {{ $movie['vote'] }}</div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>
